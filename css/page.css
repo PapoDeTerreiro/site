@@ -548,8 +548,19 @@
             background-image: url('../img/bg-home.png');
             background-size: cover;
             background-attachment: fixed;
+            background-position-x: center;
         }
         #myVideo {
             display: none;
+        }
+        .navbar-default .navbar-toggle:focus,
+        .navbar-default .navbar-toggle:hover,
+        .navbar-default .navbar-toggle {
+            border-color: #FFF;
+            color: #FFF;
+            background: transparent;
+        }
+        .navbar-default .navbar-toggle .icon-bar {
+            background-color: #FFF;
         }
     }
