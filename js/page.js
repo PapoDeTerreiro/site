@@ -1,4 +1,6 @@
 $(document).ready(function () {
+    var $logoTimer;
+
     $('#fullpage').fullpage({
         verticalCentered: true,
         sectionsColor: ['#FFFF', '#F9F9F9', '#33B5E5', '#7BAABE'],
@@ -22,13 +24,19 @@ $(document).ready(function () {
                 $('#innerMenu').removeClass('light-page');
             }
 
-            if (nextIndex > 1) {
-                $('#menuTop #logoTop').fadeIn();
-                $('#menuTop #alsoHome').fadeOut();
-            } else {
-                $('#menuTop #logoTop').fadeOut();
-                $('#menuTop #alsoHome').fadeIn();
+            if ($logoTimer) {
+                clearTimeout($logoTimer);
             }
+            $logoTimer = setTimeout(function () {
+                if (nextIndex > 1) {
+                    $('#menuTop #logoTop').fadeIn();
+                    $('#menuTop #alsoHome').fadeOut();
+                } else {
+                    $('#menuTop #logoTop').fadeOut();
+                    $('#menuTop #alsoHome').fadeIn();
+                }
+            }, 1500);
+
         }
     });
 
@@ -37,12 +45,17 @@ $(document).ready(function () {
     });
 
     $(document).on('scroll', function () {
-        if ($(document).scrollTop() > 50) {
-            $('#menuTop #logoTop').fadeIn();
-            $('#menuTop #alsoHome').fadeOut();
-        } else {
-            $('#menuTop #logoTop').fadeOut();
-            $('#menuTop #alsoHome').fadeIn();
+        if ($logoTimer) {
+            clearTimeout($logoTimer);
         }
+        $logoTimer = setTimeout(function () {
+            if ($(document).scrollTop() > 50) {
+                $('#menuTop #logoTop').fadeIn();
+                $('#menuTop #alsoHome').fadeOut();
+            } else {
+                $('#menuTop #logoTop').fadeOut();
+                $('#menuTop #alsoHome').fadeIn();
+            }
+        }, 1000);
     });
 });
