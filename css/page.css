@@ -430,16 +430,22 @@
     .navbar-default .navbar-brand,
     .navbar-default.transparent .navbar-nav>li>a {
         color: #FFF;
+        font-size: 13px;
+        font-family: 'Roboto Slab', serif;
     }
     .navbar-default.transparent .navbar-toggle {
         border-color: none;
         color: #FFF;
+        font-family: 'Roboto Slab', serif;
+        font-size: 13px;
     }
     .navbar-default.transparent .navbar-nav>.active>a,
     .navbar-default.transparent .navbar-nav>.active>a:hover,
     .navbar-default.transparent .navbar-nav>.open>a {
-        color: #FFF;
         background: transparent;
+        color: #FFF;
+        font-family: 'Roboto Slab', serif;
+        font-size: 13px;
     }
     .screamer {
         position: relative;
@@ -514,6 +520,8 @@
     }
     #section3 .container-fluid {
         margin-top: 200px;
+        margin-bottom: 50px;
+        height: 331px;
     }
     #section3 .thumbnail {
         font-family: 'Montserrat', sans-serif;
@@ -548,6 +556,18 @@
         margin-top: -11px;
         margin-bottom: 13px;
         color: #929596;
+    }
+    #footer {
+        display: inline-block;
+        width: 100%;
+        height: 150px;
+        background-color: #000;
+        background-image: url('../img/bg-footer.jpg');
+        background-size: cover;
+        background-position: center center;
+    }
+    .slimScrollBar {
+        display: none !important;
     }
     @media (max-width: 767px) {
         #logoHome {
@@ -584,6 +604,7 @@
         #section3 .container-fluid {
             margin-top: 31px;
             margin-bottom: 50px;
+            height: 408px;
         }
         .audio {
             position: absolute;
