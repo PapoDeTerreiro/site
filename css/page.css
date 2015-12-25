@@ -580,7 +580,8 @@
             left: 5%;
         }
         #section1 .container-fluid,
-        #section2 .container-fluid {
+        #section2 .container-fluid,
+        #section3 .container-fluid {
             margin-top: 31px;
             margin-bottom: 50px;
         }
