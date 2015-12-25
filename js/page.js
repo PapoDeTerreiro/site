@@ -3,7 +3,7 @@ $(document).ready(function () {
 
     $('#fullpage').fullpage({
         verticalCentered: true,
-        sectionsColor: ['#FFFF', '#F9F9F9', '#33B5E5', '#7BAABE'],
+        sectionsColor: ['#FFFF', '#F9F9F9', '#33B5E5', '#FFFFFF'],
         anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
         resize: false,
         animateAnchor: false,
@@ -18,7 +18,7 @@ $(document).ready(function () {
             $('video').get(0).play();
         },
         onLeave: function (index, nextIndex, direction) {
-            if (nextIndex === 2) {
+            if (nextIndex === 2 || nextIndex === 4) {
                 $('#innerMenu').addClass('light-page');
             } else {
                 $('#innerMenu').removeClass('light-page');

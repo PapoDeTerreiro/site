@@ -502,12 +502,52 @@
         margin-bottom: 10px;
         font-family: 'Montserrat', sans-serif;
     }
-    #section1 .container-fluid {
+    #section1 .container-fluid,
+    #section2 .container-fluid,
+    #section3 .container-fluid {
         height: 485px;
         overflow-y: auto;
         overflow-x: hidden;
         margin-top: 138px;
+        margin-bottom: 50px;
         width: 90%;
+    }
+    #section3 .container-fluid {
+        margin-top: 200px;
+    }
+    #section3 .thumbnail {
+        font-family: 'Montserrat', sans-serif;
+    }
+    #section3 .thumbnail .foto {
+        width: 100%;
+        height: 195px;
+        overflow: hidden;
+    }
+    #section3 .thumbnail .foto img {
+        width: auto;
+        height: 135%;
+        top: -42px;
+        position: relative;
+    }
+    #section3 .thumbnail h3 {
+        font-size: 17px;
+    }
+    #section3 .thumbnail .social {
+        color: #33B5E5;
+    }
+    #section3 .thumbnail .social a,
+    #section3 .thumbnail .social a:hover {
+        color: #50595D;
+        font-size: 32px;
+        text-decoration: none;
+    }
+    #section3 .thumbnail p {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 11px;
+        text-align: left;
+        margin-top: -11px;
+        margin-bottom: 13px;
+        color: #929596;
     }
     @media (max-width: 767px) {
         #logoHome {
@@ -539,7 +579,8 @@
             width: 85%;
             left: 5%;
         }
-        #section1 .container-fluid {
+        #section1 .container-fluid,
+        #section2 .container-fluid {
             margin-top: 31px;
             margin-bottom: 50px;
         }
