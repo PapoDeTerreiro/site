@@ -21,10 +21,28 @@ $(document).ready(function () {
             } else {
                 $('#innerMenu').removeClass('light-page');
             }
+
+            if (nextIndex > 1) {
+                $('#menuTop #logoTop').fadeIn();
+                $('#menuTop #alsoHome').fadeOut();
+            } else {
+                $('#menuTop #logoTop').fadeOut();
+                $('#menuTop #alsoHome').fadeIn();
+            }
         }
     });
 
     $(".customScrollbar").mCustomScrollbar({
         theme: 'rounded-dots-dark'
+    });
+
+    $(document).on('scroll', function () {
+        if ($(document).scrollTop() > 50) {
+            $('#menuTop #logoTop').fadeIn();
+            $('#menuTop #alsoHome').fadeOut();
+        } else {
+            $('#menuTop #logoTop').fadeOut();
+            $('#menuTop #alsoHome').fadeIn();
+        }
     });
 });
