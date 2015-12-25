@@ -2,262 +2,250 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Papo de Terreiro</title>
-	<meta name="keywords"  content="fullpage,jquery,demo,screen,fullscreen,backgrounds,full-screen" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Papo de Terreiro</title>
+    <meta name="keywords" content="fullpage,jquery,demo,screen,fullscreen,backgrounds,full-screen" />
+    <meta name=viewport content="width=device-width,initial-scale=1">
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-	<script type="text/javascript" src="../vendors/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
 
-	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
-	<link rel="stylesheet" type="text/css" href="css/page.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="css/page.css" />
 
-	<!--[if IE]>
-		<script type="text/javascript">
-			 var console = { log: function() {} };
-		</script>
-	<![endif]-->
+    <!--[if IE]>
+    <script type="text/javascript">
+      var console = { log: function() {} };
+    </script>
+  <![endif]-->
 
-	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+  <![endif]-->
 
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$('#fullpage').fullpage({
-				verticalCentered: true,
-				sectionsColor: ['#FFFF', '#F9F9F9', '#33B5E5', '#7BAABE'],
-				anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
-				resize: false,
-				animateAnchor:false,
-				scrollOverflow: false,
-				autoScrolling:true,
-				responsive: 900,
-				fitSection: false,
-				menu: '#innerMenu',
-				navigation:true,
-				scrollingSpeed: 1000,
-				afterRender: function(){
-					$('video').get(0).play();
-				},
-				onLeave: function(index, nextIndex, direction){
-					if(nextIndex === 2){
-						$('#innerMenu').addClass('light-page');
-					} else {
-						$('#innerMenu').removeClass('light-page');
-					}
-				}
-			});
-		});
-	</script>
+    <script type="text/javascript" src="js/jquery.fullPage.js"></script>
 
 </head>
+
 <body>
 
-<div id="menuTop">
-	<div id="also"> VEJA TAMBÉM:</div>
-	<div id="icons"><a href="https://soundcloud.com/programa-papo-de-terreiro" target="_blank"><i class="fa fa-soundcloud"></i></a></div>
-	<div id="icons"><a href="https://www.facebook.com/groups/1841579316068295/?fref=ts" target="_blank"><i class="fa fa-facebook-square"></i></a></div>
-	<div id="icons"><a href="https://twitter.com/PapoDeTerreiro" target="_blank"><i class="fa fa-twitter-square"></i></a></div>
-</div>
+    <div id="menuTop">
+        <div id="also"> VEJA TAMBÉM:</div>
+        <div id="icons"><a href="https://soundcloud.com/programa-papo-de-terreiro" target="_blank"><i class="fa fa-soundcloud"></i></a></div>
+        <div id="icons"><a href="https://www.facebook.com/groups/1841579316068295/?fref=ts" target="_blank"><i class="fa fa-facebook-square"></i></a></div>
+        <div id="icons"><a href="https://twitter.com/PapoDeTerreiro" target="_blank"><i class="fa fa-twitter-square"></i></a></div>
+    </div>
 
-<div id="fullpage">
-	<div class="section" id="section0">
-		<video autoplay loop muted id="myVideo">
-			<source src="video/14103301.mp4" type="video/mp4">
-			<source src="video/14103301.webm" type="video/webm">
-		</video>
-		<div id="blanket"></div>
-		<div id="logoHome"><i class="fa fa-microphone"></i> PAPO DE TERREIRO <div>programa</div></div>
-		<div id="innerMenu">
+    <div id="fullpage">
+        <div class="section" id="section0">
+            <video autoplay loop muted id="myVideo">
+                <source src="video/14103301.mp4" type="video/mp4">
+                <source src="video/14103301.webm" type="video/webm">
+            </video>
+            <div id="blanket"></div>
+            <div id="logoHome"><i class="fa fa-microphone"></i> PAPO DE TERREIRO
+                <div>programa</div>
+            </div>
+            <div id="innerMenu">
 
-			<nav class="navbar navbar-default transparent">
-			  <div class="container-fluid">
-			    <!-- Brand and toggle get grouped for better mobile display -->
-			    <div class="navbar-header">
-			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-			        <span class="sr-only">Toggle navigation</span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-			      </button>
-			      <a class="navbar-brand" href="#"></a>
-			    </div>
+                <nav class="navbar navbar-default transparent">
+                    <div class="container-fluid">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="#"></a>
+                        </div>
 
-			    <!-- Collect the nav links, forms, and other content for toggling -->
-			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			      <ul class="nav navbar-nav">
-			        <li data-menuanchor="firstPage" class="active"><a href="#firstPage">HOME</a></li>
-			        <li data-menuanchor="secondPage"><a href="#secondPage">PROGRAMAS</a></li>
-							<li data-menuanchor="3rdPage"><a href="#3rdPage">VÍDEOS</a></li>
-			        <li class="dropdown">
-			          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">OUTRAS INICIATIVAS <span class="caret"></span></a>
-			          <ul class="dropdown-menu">
-			            <li><a href="https://www.facebook.com/groups/366354856787426/?fref=ts" target="_blank">Umbanda Brasil	</a></li>
-			            <li><a href="https://www.facebook.com/Mensagens-de-Aruanda-178082952334218/" target="_blank">Mensagens de Aruanda</a></li>
-			            <li role="separator" class="divider"></li>
-			            <li><a href="https://soundcloud.com/programa-papo-de-terreiro" target="_blank">SoundClound</a></li>
-			            <li role="separator" class="divider"></li>
-			            <li><a href="https://twitter.com/PapoDeTerreiro" target="_blank">Twitter</a></li>
-			          </ul>
-			        </li>
-							<li data-menuanchor="4thpage"><a href="#4thpage">CONTATOS</a></li>
-			      </ul>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+                                <li data-menuanchor="firstPage" class="active"><a href="#firstPage">HOME</a></li>
+                                <li data-menuanchor="secondPage"><a href="#secondPage">PROGRAMAS</a></li>
+                                <li data-menuanchor="3rdPage"><a href="#3rdPage">VÍDEOS</a></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">OUTRAS INICIATIVAS <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="https://www.facebook.com/groups/366354856787426/?fref=ts" target="_blank">Umbanda Brasil	</a></li>
+                                        <li><a href="https://www.facebook.com/Mensagens-de-Aruanda-178082952334218/" target="_blank">Mensagens de Aruanda</a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li><a href="https://soundcloud.com/programa-papo-de-terreiro" target="_blank">SoundClound</a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li><a href="https://twitter.com/PapoDeTerreiro" target="_blank">Twitter</a></li>
+                                    </ul>
+                                </li>
+                                <li data-menuanchor="4thpage"><a href="#4thpage">CONTATOS</a></li>
+                            </ul>
 
-			    </div><!-- /.navbar-collapse -->
-			  </div><!-- /.container-fluid -->
-			</nav>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
 
-		</div>
-		<div class="layer">
-			<div class="screamer">BEM VINDO PROGRAMA PAPO DE TERREIRO</div>
-			<div class="msn">Diálogos sobre UMBANDA e suas Mirongas</div>
-			<div class="supplements">Primeiro Programa Papo de Terreiro, onde abordamos Allan Kardec e a Codificação do Espiritismo.</div>
-			<div class="audio">
-				<iframe width="100%" height="130" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/239025394&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
-			</div>
-		</div>
-	</div>
+            </div>
+            <div class="layer">
+                <div class="screamer">BEM VINDO PROGRAMA PAPO DE TERREIRO</div>
+                <div class="msn">Diálogos sobre UMBANDA e suas Mirongas</div>
+                <div class="supplements">Primeiro Programa Papo de Terreiro, onde abordamos Allan Kardec e a Codificação do Espiritismo.</div>
+                <div class="audio">
+                    <iframe width="100%" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/239025394&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+                </div>
+            </div>
+        </div>
 
-	<div class="section" id="section1">
-		<div class="container-fluid">
+        <div class="section" id="section1">
+            <div class="container-fluid customScrollbar">
 
-			<div class="row">
+                <div class="row">
 
-			  <div class="col-sm-6 col-md-4">
-			    <div class="thumbnail">
-			      <div class="caption">
-			        <h3>Programa 1 Allan Kardec</h3>
-			        <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/239025394&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
-			      </div>
-			    </div>
-			  </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                            <div class="caption">
+                                <h3>Programa 1 Allan Kardec</h3>
+                                <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/239025394&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+                            </div>
+                        </div>
+                    </div>
 
-				<div class="col-sm-6 col-md-4">
-			    <div class="thumbnail">
-			      <div class="caption">
-			        <h3>Programa 1 Allan Kardec</h3>
-			        <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/239025394&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
-			      </div>
-			    </div>
-			  </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                            <div class="caption">
+                                <h3>Programa 1 Allan Kardec</h3>
+                                <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/239025394&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+                            </div>
+                        </div>
+                    </div>
 
-				<div class="col-sm-6 col-md-4">
-			    <div class="thumbnail">
-			      <div class="caption">
-			        <h3>Programa 1 Allan Kardec</h3>
-			        <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/239025394&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
-			      </div>
-			    </div>
-			  </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                            <div class="caption">
+                                <h3>Programa 1 Allan Kardec</h3>
+                                <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/239025394&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+                            </div>
+                        </div>
+                    </div>
 
-			</div>
+                </div>
 
-			<div class="row">
+                <div class="row">
 
-			  <div class="col-sm-6 col-md-4">
-			    <div class="thumbnail">
-			      <div class="caption">
-			        <h3>Programa 1 Allan Kardec</h3>
-			        <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/239025394&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
-			      </div>
-			    </div>
-			  </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                            <div class="caption">
+                                <h3>Programa 1 Allan Kardec</h3>
+                                <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/239025394&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+                            </div>
+                        </div>
+                    </div>
 
-				<div class="col-sm-6 col-md-4">
-			    <div class="thumbnail">
-			      <div class="caption">
-			        <h3>Programa 1 Allan Kardec</h3>
-			        <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/239025394&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
-			      </div>
-			    </div>
-			  </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                            <div class="caption">
+                                <h3>Programa 1 Allan Kardec</h3>
+                                <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/239025394&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+                            </div>
+                        </div>
+                    </div>
 
-				<div class="col-sm-6 col-md-4">
-			    <div class="thumbnail">
-			      <div class="caption">
-			        <h3>Programa 1 Allan Kardec</h3>
-			        <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/239025394&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
-			      </div>
-			    </div>
-			  </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                            <div class="caption">
+                                <h3>Programa 1 Allan Kardec</h3>
+                                <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/239025394&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+                            </div>
+                        </div>
+                    </div>
 
-			</div>
+                </div>
 
-			<div class="row">
+                <div class="row">
 
-			  <div class="col-sm-6 col-md-4">
-			    <div class="thumbnail">
-			      <div class="caption">
-			        <h3>Programa 1 Allan Kardec</h3>
-			        <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/239025394&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
-			      </div>
-			    </div>
-			  </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                            <div class="caption">
+                                <h3>Programa 1 Allan Kardec</h3>
+                                <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/239025394&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+                            </div>
+                        </div>
+                    </div>
 
-				<div class="col-sm-6 col-md-4">
-			    <div class="thumbnail">
-			      <div class="caption">
-			        <h3>Programa 1 Allan Kardec</h3>
-			        <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/239025394&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
-			      </div>
-			    </div>
-			  </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                            <div class="caption">
+                                <h3>Programa 1 Allan Kardec</h3>
+                                <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/239025394&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+                            </div>
+                        </div>
+                    </div>
 
-				<div class="col-sm-6 col-md-4">
-			    <div class="thumbnail">
-			      <div class="caption">
-			        <h3>Programa 1 Allan Kardec</h3>
-			        <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/239025394&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
-			      </div>
-			    </div>
-			  </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                            <div class="caption">
+                                <h3>Programa 1 Allan Kardec</h3>
+                                <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/239025394&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+                            </div>
+                        </div>
+                    </div>
 
-			</div>
+                </div>
 
-			<div class="row">
+                <div class="row">
 
-			  <div class="col-sm-6 col-md-4">
-			    <div class="thumbnail">
-			      <div class="caption">
-			        <h3>Programa 1 Allan Kardec</h3>
-			        <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/239025394&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
-			      </div>
-			    </div>
-			  </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                            <div class="caption">
+                                <h3>Programa 1 Allan Kardec</h3>
+                                <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/239025394&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+                            </div>
+                        </div>
+                    </div>
 
-				<div class="col-sm-6 col-md-4">
-			    <div class="thumbnail">
-			      <div class="caption">
-			        <h3>Programa 1 Allan Kardec</h3>
-			        <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/239025394&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
-			      </div>
-			    </div>
-			  </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                            <div class="caption">
+                                <h3>Programa 1 Allan Kardec</h3>
+                                <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/239025394&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+                            </div>
+                        </div>
+                    </div>
 
-				<div class="col-sm-6 col-md-4">
-			    <div class="thumbnail">
-			      <div class="caption">
-			        <h3>Programa 1 Allan Kardec</h3>
-			        <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/239025394&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
-			      </div>
-			    </div>
-			  </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                            <div class="caption">
+                                <h3>Programa 1 Allan Kardec</h3>
+                                <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/239025394&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+                            </div>
+                        </div>
+                    </div>
 
-			</div>
+                </div>
 
-		</div>
-	</div>
+            </div>
+        </div>
 
-	<div class="section" id="section2"><h1></h1></div>
+        <div class="section" id="section2">
+            <h1></h1></div>
 
-	<div class="section" id="section3"><h1></h1></div>
-</div>
+        <div class="section" id="section3">
+            <h1></h1></div>
+    </div>
 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="js/page.js"></script>
 </body>
+
 </html>
