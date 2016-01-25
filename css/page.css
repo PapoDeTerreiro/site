@@ -2,7 +2,7 @@
     @CHARSET "ISO-8859-1";
     /* Reset CSS
  * --------------------------------------- */
-    
+
     body,
     div,
     dl,
@@ -86,7 +86,7 @@
     }
     /* Custom CSS
  * --------------------------------------- */
-    
+
     body {
         font-family: arial, helvetica;
         color: #333;
@@ -271,7 +271,7 @@
     }
     /* Style for our header texts
 * --------------------------------------- */
-    
+
     h1 {
         font-size: 5em;
         font-family: arial, helvetica;
@@ -281,7 +281,7 @@
     }
     /* Centered texts in each section
 * --------------------------------------- */
-    
+
     .section {
         text-align: center;
         overflow: hidden;
@@ -311,15 +311,15 @@
         width: 100%;
         height: 100%;
         /*background-size: 100% 100%;*/
-        background: -moz-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.81) 83%, rgba(0, 0, 0, 0.81) 100%);
-        background: -webkit-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.81) 83%, rgba(0, 0, 0, 0.81) 100%);
-        background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.81) 83%, rgba(0, 0, 0, 0.81) 100%);
+        background: -moz-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 29%, rgba(0, 0, 0, 0.81) 83%, rgba(0, 0, 0, 0.81) 100%);
+        background: -webkit-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 29%, rgba(0, 0, 0, 0.81) 83%, rgba(0, 0, 0, 0.81) 100%);
+        background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 29%, rgba(0, 0, 0, 0.81) 83%, rgba(0, 0, 0, 0.81) 100%);
         filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#cf000000', GradientType=1);
         z-index: 4;
     }
     /* Layer with position absolute in order to have it over the video
 * --------------------------------------- */
-    
+
     #section0 .layer {
         position: absolute;
         z-index: 4;
@@ -328,13 +328,13 @@
         top: 43%;
     }
     /*solves problem with overflowing video in Mac with Chrome */
-    
+
     #section0 {
         overflow: hidden;
     }
     /* Bottom menu
 * --------------------------------------- */
-    
+
     #infoMenu li a {
         color: #fff;
     }
