@@ -39,11 +39,16 @@ $(document).ready(function () {
 
             setTimeout(function () {
                 if (index !== 0) {
-                    $('#section' + index).load('page' + index + '.html', function () {
-                        $(".customScrollbar").mCustomScrollbar({
-                            theme: 'rounded-dots-dark'
+                    var $elmt = $('#section' + index);
+
+                    if ($elmt.attr('data-loading') === 'false') {
+                        $elmt.load('page' + index + '.html', function () {
+                            $(".customScrollbar").mCustomScrollbar({
+                                theme: 'rounded-dots-dark'
+                            });
+                            $elmt.attr('data-loading', 'true');
                         });
-                    });
+                    }
                 }
             }, 2000);
         }
