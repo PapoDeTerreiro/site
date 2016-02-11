@@ -37,11 +37,15 @@ $(document).ready(function () {
                 }
             }, 1500);
 
-            $('#section' + index).load('page' + index + '.html', function () {
-                $(".customScrollbar").mCustomScrollbar({
-                    theme: 'rounded-dots-dark'
-                });
-            });
+            setTimeout(function () {
+                if (index !== 0) {
+                    $('#section' + index).load('page' + index + '.html', function () {
+                        $(".customScrollbar").mCustomScrollbar({
+                            theme: 'rounded-dots-dark'
+                        });
+                    });
+                }
+            }, 2000);
         }
     });
 
