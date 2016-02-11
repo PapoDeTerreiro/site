@@ -37,12 +37,12 @@ $(document).ready(function () {
                 }
             }, 1500);
 
-            console.log(index);
+            $('#section' + index).load('page' + index + '.html', function () {
+                $(".customScrollbar").mCustomScrollbar({
+                    theme: 'rounded-dots-dark'
+                });
+            });
         }
-    });
-
-    $(".customScrollbar").mCustomScrollbar({
-        theme: 'rounded-dots-dark'
     });
 
     $(document).on('scroll', function () {
