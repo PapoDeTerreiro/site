@@ -708,4 +708,9 @@
             left: 40px !important;
             top: 5px !important;
         }
+        fb {
+            position: relative;
+            top: 5px;
+            left: 14px;
+        }
     }
