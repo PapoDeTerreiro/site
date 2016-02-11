@@ -48,6 +48,10 @@ $(document).ready(function () {
                             });
                             $elmt.attr('data-loading', 'true');
                         });
+                    } else {
+                        $(".customScrollbar").mCustomScrollbar({
+                            theme: 'rounded-dots-dark'
+                        });
                     }
                 }
             }, 2000);
