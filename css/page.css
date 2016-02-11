@@ -2,7 +2,7 @@
     @CHARSET "ISO-8859-1";
     /* Reset CSS
  * --------------------------------------- */
-
+    
     body,
     div,
     dl,
@@ -86,7 +86,7 @@
     }
     /* Custom CSS
  * --------------------------------------- */
-
+    
     body {
         font-family: arial, helvetica;
         color: #333;
@@ -271,7 +271,7 @@
     }
     /* Style for our header texts
 * --------------------------------------- */
-
+    
     h1 {
         font-size: 5em;
         font-family: arial, helvetica;
@@ -281,7 +281,7 @@
     }
     /* Centered texts in each section
 * --------------------------------------- */
-
+    
     .section {
         text-align: center;
         overflow: hidden;
@@ -319,7 +319,7 @@
     }
     /* Layer with position absolute in order to have it over the video
 * --------------------------------------- */
-
+    
     #section0 .layer {
         position: absolute;
         z-index: 4;
@@ -328,13 +328,13 @@
         top: 43%;
     }
     /*solves problem with overflowing video in Mac with Chrome */
-
+    
     #section0 {
         overflow: hidden;
     }
     /* Bottom menu
 * --------------------------------------- */
-
+    
     #infoMenu li a {
         color: #fff;
     }
@@ -628,7 +628,7 @@
         }
         #section0,
         #blanket {
-            background-image: url('../img/bg-home.png');
+            /* background-image: url('../img/bg-home.png'); */
             background-size: cover;
             background-attachment: fixed;
             background-position-x: center;
