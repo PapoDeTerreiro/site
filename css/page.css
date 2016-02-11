@@ -669,7 +669,7 @@
         }
         #section0,
         #blanket {
-            /* background-image: url('../img/bg-home.png'); */
+            background-image: url('../img/bg-home.png');
             background-size: cover;
             background-attachment: fixed;
             background-position-x: center;
@@ -696,5 +696,16 @@
             font-size: 10px;
             top: 19px;
             left: 154px;
+        }
+        #fblogin {
+            width: 76px !important;
+            right: 10px !important;
+        }
+        #fblogin .name {
+            display: none !important;
+        }
+        #fblogin .img {
+            left: 40px !important;
+            top: 5px !important;
         }
     }
