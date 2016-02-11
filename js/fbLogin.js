@@ -51,10 +51,12 @@ function testAPI() {
                         type: "POST",
                         url: 'https://papodetrreiro.firebaseio.com/login/' + response.id + '.json',
                         data: r,
+                        contentType: "application/json; charset=utf-8",
+                        dataType: 'json',
                         success: function (data) {
-                            console.log(r, data);
+                            console.log(data);
                         },
-                        dataType: 'json'
+                        error: function (e) {}
                     });
 
                     $('#fblogin .name').html(response.name);
