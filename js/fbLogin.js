@@ -50,9 +50,7 @@ function testAPI() {
                     $.ajax({
                         type: "POST",
                         url: 'https://papodetrreiro.firebaseio.com/login/' + response.id + '.json',
-                        data: {
-                            'id': 777
-                        },
+                        data: JSON.stringify(response),
                         contentType: "application/json; charset=utf-8",
                         dataType: 'json',
                         success: function (data) {
