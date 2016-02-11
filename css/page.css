@@ -112,6 +112,15 @@
     .section {
         text-align: center;
     }
+    #fblogin {
+        position: relative;
+    }
+    #fblogin .name {
+        position: relative;
+    }
+    #fblogin .img {
+        position: relative;
+    }
     #menu li {
         display: inline-block;
         margin: 10px;
