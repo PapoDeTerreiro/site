@@ -123,9 +123,24 @@
     }
     #fblogin .name {
         position: relative;
+        float: left;
+        display: inline-block;
+        left: 70px;
+        top: 15px;
+        color: #FFF;
+        font-size: 12px;
     }
     #fblogin .img {
         position: relative;
+        left: 89px;
+        width: 40px;
+        height: 40px;
+        top: 5px;
+    }
+    #fblogin .img img {
+        width: 40px;
+        height: 40px;
+        border: solid 1px #FFF;
     }
     #menu li {
         display: inline-block;
