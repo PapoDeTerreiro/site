@@ -1,3 +1,5 @@
+$('#fblogin').hide();
+
 function statusChangeCallback(response) {
     // console.log('statusChangeCallback');
     // console.log(response);
@@ -46,9 +48,9 @@ function testAPI() {
             function (r) {
                 if (r && !r.error) {
                     console.log(r);
-                    $('#fblogin').show();
                     $('#fblogin .name').html(response.name);
                     $('#fblogin .img').html('<img src="' + r.data.url + '">');
+                    $('#fblogin').fadeIn();
                 }
             }
         );
