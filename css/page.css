@@ -113,7 +113,14 @@
         text-align: center;
     }
     #fblogin {
-        position: relative;
+        display: none;
+        position: fixed;
+        top: 0px;
+        height: 50px;
+        width: 200px;
+        z-index: 9999;
+        right: 11px;
+        background-color: rgb(51, 181, 229);
     }
     #fblogin .name {
         position: relative;
