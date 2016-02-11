@@ -83,14 +83,13 @@
         function testAPI() {
             FB.api('/me', function(response) {
                 console.log(response);
-                document.getElementById('status').innerHTML =
-                    'Thanks for logging in, ' + response.name + '!';
-
                 FB.api(
                     "/" + response.id + "/picture",
                     function(r) {
                         if (r && !r.error) {
                             console.log(r);
+
+                            document.getElementById('status').innerHTML = '<img src="' + r.data.url + '"> ' + response.name + '!';
                         }
                     }
                 );
@@ -99,11 +98,6 @@
 
     </script>
 
-    <!--
-  Below we include the Login Button social plugin. This button uses
-  the JavaScript SDK to present a graphical Login button that triggers
-  the FB.login() function when clicked.
--->
 
     <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
     </fb:login-button>
