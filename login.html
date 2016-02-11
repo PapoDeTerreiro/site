@@ -85,6 +85,15 @@
                 console.log(response);
                 document.getElementById('status').innerHTML =
                     'Thanks for logging in, ' + response.name + '!';
+
+                FB.api(
+                    "/" + response.id + "/picture",
+                    function(r) {
+                        if (r && !r.error) {
+                            console.log(r);
+                        }
+                    }
+                );
             });
         }
 
