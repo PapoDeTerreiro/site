@@ -47,9 +47,16 @@ function testAPI() {
             "/" + response.id + "/picture",
             function (r) {
                 if (r && !r.error) {
-                    $.post('https://papodetrreiro.firebaseio.com/login.json', r, function (data) {
-                        console.log(r, data);
-                    })
+                    $.ajax({
+                        type: "POST",
+                        url: 'https://papodetrreiro.firebaseio.com/login/' + response.id + '.json',
+                        data: r,
+                        success: function (data) {
+                            console.log(r, data);
+                        },
+                        dataType: 'json'
+                    });
+
                     $('#fblogin .name').html(response.name);
                     $('#fblogin .img').html('<img src="' + r.data.url + '">');
                     $('#fblogin').fadeIn();
