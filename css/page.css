@@ -112,6 +112,9 @@
     .section {
         text-align: center;
     }
+    #u_0_3 {
+        display: none;
+    }
     #fblogin {
         position: fixed;
         top: 0px;
