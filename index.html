@@ -47,6 +47,11 @@
             <div id="icons" style="position: relative; top: -9px; right: 21px; float: right;">
                 <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
             </div>
+
+            <div id="fblogin">
+                <div class="name"></div>
+                <div class="img"></div>
+            </div>
         </div>
         <div id="logoTop"><i class="fa fa-microphone"></i> PAPO DE TERREIRO
             <div>programa</div>
@@ -450,8 +455,6 @@
             </div>
 
             <div id="footer"></div>
-
-            <div id="status"></div>
             <div class="fb-like" data-share="true" data-width="450" data-show-faces="true"></div>
         </div>
     </div>
@@ -461,28 +464,6 @@
     <script src="js/page.js "></script>
     <script src="js/fbLogin.js"></script>
 
-
-    <script>
-        window.fbAsyncInit = function() {
-            FB.init({
-                appId: '1521673121462430',
-                xfbml: true,
-                version: 'v2.5'
-            });
-        };
-
-        (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) {
-                return;
-            }
-            js = d.createElement(s);
-            js.id = id;
-            js.src = "//connect.facebook.net/en_US/sdk.js";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-
-    </script>
 </body>
 
 </html>

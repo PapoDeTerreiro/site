@@ -46,8 +46,8 @@ function testAPI() {
             function (r) {
                 if (r && !r.error) {
                     console.log(r);
-
-                    document.getElementById('status').innerHTML = '<img src="' + r.data.url + '"> ' + response.name + '!';
+                    $('#fblogin .name').html(response.name);
+                    $('#fblogin .img').html('<img src="' + r.data.url + '">');
                 }
             }
         );
