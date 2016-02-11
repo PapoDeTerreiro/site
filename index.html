@@ -3,6 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="UTF-8">
     <title>Papo de Terreiro</title>
     <meta name="keywords" content="fullpage,jquery,demo,screen,fullscreen,backgrounds,full-screen" />
     <meta name=viewport content="width=device-width,initial-scale=1">
@@ -43,6 +44,9 @@
             <div id="icons"><a href="https://soundcloud.com/programa-papo-de-terreiro" target="_blank"><i class="fa fa-soundcloud"></i></a></div>
             <div id="icons"><a href="https://www.facebook.com/groups/1841579316068295/?fref=ts" target="_blank"><i class="fa fa-facebook-square"></i></a></div>
             <div id="icons"><a href="https://twitter.com/PapoDeTerreiro" target="_blank"><i class="fa fa-twitter-square"></i></a></div>
+
+            <div class="fb-like" data-share="true" data-width="450" data-show-faces="true"></div>
+            <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
         </div>
         <div id="logoTop"><i class="fa fa-microphone"></i> PAPO DE TERREIRO
             <div>programa</div>
@@ -446,12 +450,38 @@
             </div>
 
             <div id="footer"></div>
+
+            <div id="status"></div>
         </div>
     </div>
 
     <script src="js/jquery.mCustomScrollbar.concat.min.js "></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js " integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS " crossorigin="anonymous "></script>
     <script src="js/page.js "></script>
+    <script src="js/fbLogin.js"></script>
+
+
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId: '1521673121462430',
+                xfbml: true,
+                version: 'v2.5'
+            });
+        };
+
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+    </script>
 </body>
 
 </html>
