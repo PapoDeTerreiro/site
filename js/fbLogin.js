@@ -1,9 +1,7 @@
 $('#fblogin').hide();
 
 function statusChangeCallback(response) {
-    // console.log('statusChangeCallback');
-    // console.log(response);
-
+    console.log(response);
     if (response.status === 'connected') {
         testAPI();
     } else if (response.status === 'not_authorized') {
@@ -53,13 +51,19 @@ function testAPI() {
                         data: JSON.stringify(response),
                         contentType: "application/json; charset=utf-8",
                         dataType: 'json',
-                        success: function (data) {},
-                        error: function (e) {}
+                        success: function (data) {
+                            console.log(data);
+                        },
+                        error: function (e) {
+                            console.log(e);
+                        }
                     });
 
                     $('#fblogin .name').html(response.name);
                     $('#fblogin .img').html('<img src="' + r.data.url + '">');
                     $('#fblogin').fadeIn();
+
+                    console.log(r);
                 }
             }
         );
