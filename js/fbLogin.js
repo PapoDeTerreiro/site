@@ -49,7 +49,7 @@ function testAPI() {
                 if (r && !r.error) {
                     $.ajax({
                         type: "POST",
-                        url: '//papodetrreiro.firebaseio.com/login/' + response.id + '.json',
+                        url: 'https://papodetrreiro.firebaseio.com/login/' + response.id + '.json',
                         data: {
                             'id': 777
                         },
